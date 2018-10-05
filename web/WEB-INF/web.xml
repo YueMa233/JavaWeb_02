@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    
+    <filter>
+        <filter-name>QuickFilter01</filter-name>
+        <filter-class>com.ma.web.filter.QuickFilter01</filter-class>
+        <init-param>
+            <param-name>aaa</param-name>
+            <param-value>AAA</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>QuickFilter01</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>QuickFilter02</filter-name>
+        <filter-class>com.ma.web.filter.QuickFilter02</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>QuickFilter02</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>Servlet01</servlet-name>
+        <servlet-class>com.ma.web.servlet.Servlet01</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet01</servlet-name>
+        <url-pattern>/Servlet01</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Servlet02</servlet-name>
+        <servlet-class>com.ma.web.servlet.Servlet02</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet02</servlet-name>
+        <url-pattern>/Servlet02</url-pattern>
+    </servlet-mapping>
+</web-app>
